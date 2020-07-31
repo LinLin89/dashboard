@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DashBoard Project</title>
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="vendor/feather-icons-web/feather.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <section class="main container-fluid">
+        <div class="row">
+            <!-- sidebar start -->
+            <div class="col-12 col-lg-3 col-xl-2 vh-100 sidebar">
+                <div class="d-flex justify-content-between align-items-center py-2 mt-3">
+                    <div class="d-flex justify-content-center align-items-center ">
+                        <span class="bg-primary p-2 pt-3 rounded mr-2 d-flex justify-content-center">
+                            <i class="feather-shopping-bag text-white h4 mb-0"></i>
+                        </span >
+                        <span class="font-width-bolder h4 mb-0 text-uppercase text-primary" >My Shop</span>
+                    </div>
+                    <button class=" btn btn-light d-block d-lg-none " id="hide-sidebarbtn">
+                        <i class="feather-x text-primary" style="font-size: 2em;"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- sidebar end -->
+
+            <div class="col-12 col-lg-9 col-xl-10 vh-100 py-3 content">
+                <div class="row header mb-4">
+                    <div class="col-12">
+                        <div class="p-2 bg-primary d-flex justify-content-between align-items-center rounded">
+                            <button class=" btn btn-primary d-block d-lg-none" id="show-sidebarbtn">
+                                <i class="feather-menu text-light" style="font-size: 2em;"></i>
+                            </button>
+                            <form action="" method="post" class="d-none d-md-block">
+                                <div class="form-inline">
+                                    <input type="text" class="form-control mr-2">
+                                    <button class="btn btn-light">
+                                        <i class="feather-search text-primary"></i>
+                                    </button>
+                                </div>
+                            </form>
+                            <div class="dropdown">
+                                <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <img src="img/user/me.jpg" class="user-img shadow-sm" alt=""> Lin Lin
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                  <a class="dropdown-item" href="#">Action</a>
+                                  <a class="dropdown-item" href="#">Another action</a>
+                                  <div class="dropdown-divider"></div>
+                                  <a class="dropdown-item" href="#">Log Out</a>
+                                </div>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+                
+                   
+                <!-- content area Start -->
+                <div class="row">
+                    <div class="col-12">
+                        <nav aria-label="breadcrumb ">
+                            <ol class="breadcrumb bg-white mb-4">
+                              <li class="breadcrumb-item"><a href="#">Home</a></li>
+                              <li class="breadcrumb-item"><a href="#">Item</a></li>
+                              <li class="breadcrumb-item active" aria-current="page">Add Item</li>
+                            </ol>
+                          </nav>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-xl-8">
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h4 class="mb-0">
+                                        <i class="feather-plus-circle text-primary"></i>Add Item
+                                    </h4>
+                                    <a href="itemlist.html" class="btn btn-outline-primary">
+                                        <i class="feather-list"></i>
+                                    </a>
+                                </div>
+                                <hr>
+                                <form action="#" method="post">
+                                    <div class="row">
+                                        <div class="col-12 col-md-6">
+                                            <div class="form-group">
+                                                <label for="photo">
+                                                    Photo Upload                                                    
+                                                </label>
+                                                <i class="feather-info" data-container="body" data-toggle="popover" data-placement="top" data-content="Only support jpg, png"></i>
+
+                                                <input type="file" name="photo" id="photo" class="form-control p-1" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="name">Item Name</label>
+                                                <input type="text" id="name" name="name" class="form-control">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="t">Type</label>
+                                                <select name="type" class="form-control custom-select" id="t">
+                                                    <option value="0">ကုန်စို</option>
+                                                    <option value="1">ကုန် ေခြာက်</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="c">Main Category</label>
+                                                <select name="c" class="form-control custom-select" id="c">
+                                                    <option value="" selected disabled>Select Category</option>
+                                                   
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="sc">Sub Category</label>
+                                                <select name="sc" class="form-control custom-select" id="sc">
+                                                    <option value="" selected disabled>Select Sub Category</option>
+
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-6">
+                                            <div class="form-row">
+                                                <div class="col-6">
+                                                    <label for="Q">Item Quantity</label>
+                                                    <input type="text" name="Q" class="form-control" id="Q">
+
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="form-group">
+                                                        <label for="type">Unit</label>
+                                                        <select name="type" class="form-control custom-select" id="type">
+                                                            <option value="0">ကုန်စို</option>
+                                                            <option value="1">ကုန် ေခြာက်</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="price">Price</label>
+                                                <input type="number" id="price" name="price" class="form-control">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="des">Description</label>
+                                                <textarea type="text" id="des" name="des" rows="8" class="form-control"></textarea>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <button class="btn btn-primary">Add Item</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- content area End -->
+            </div>
+                     
+
+        </div>
+    </div>
+</div>
+        
+
+    </section>
+    <script src="vendor/popper.js"></script>
+    <script src="vendor/jquery-3.3.1.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+        let category=["phone","computer","TV"];
+        let subcategory=[
+            {name:"Samsung",category_id:0},
+            {name:"me",category_id:0},
+            {name:"Hp",category_id:1},
+            {name:"Acer",category_id:1},
+            {name:"Panasonic",category_id:2},
+            {name:"Samsung",category_id:2}
+        ]
+
+
+        category.map(function(el,index){
+            $("#c").append(`<option value="${index}">${el}</option>`);
+        });
+        subcategory.map(function(el,index){
+            $("#sc").append(`<option value="${index}" data-category="${el.category_id}">${el.name}</option>`);
+        });
+
+        $("#c").on("change",function(){
+            let currentCategoryId = $(this).val();
+            $("#sc option").hide();
+            $(`[data-category=${currentCategoryId}]`).show();
+        });
+    </script>
+
+
+</body>
+</html>
